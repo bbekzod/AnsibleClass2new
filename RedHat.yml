@@ -1,0 +1,5 @@
+- name: Install apache on RedHat
+  yum:
+    name: "{{ package_name }}"
+    state: latest
+    

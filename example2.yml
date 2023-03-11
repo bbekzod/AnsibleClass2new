@@ -1,7 +1,7 @@
 - hosts: all
   tasks:
-  - name: Install Apache
-    package:
-      name: "{{ package_name }}"
-      state: present
-      update_cache: yes
+  - debug:
+      msg: "{{ ansible_os_family }}"
+
+  - include_tasks: "{{ ansible_os_family }}.yml"
+  
